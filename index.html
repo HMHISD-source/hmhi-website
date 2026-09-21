@@ -65,7 +65,35 @@ section{padding:70px 0}.light{background:var(--l)}.dark{background:var(--b);colo
 
 <section id="request"><div class="wrap formGrid"><div><div class="head"><h2>Request service</h2><p>Give us enough information to understand the job before the visit. Multiple issues are welcome.</p></div><div class="card"><h3>Intake captures</h3><ul><li>Customer type</li><li>Problem/service category</li><li>Urgency</li><li>Property ZIP</li><li>Preferred date/time</li><li>Budget range</li><li>Photos and description</li></ul><p class="muted">This information can also be used to measure actual customer demand and improve HMHI services over time.</p></div></div>
 <form action="https://formspree.io/f/myezzakz" method="POST">
-<div class="row"><div><label>I'm a…</label><select><option>Landlord</option><option>Renter</option><option>Homeowner</option><option>Property manager</option><option>Business</option><option>Other</option></select></div><div><label>Urgency</label><select><option>Standard / flexible</option><option>Within 24–48 hours</option><option>This week</option><option>Emergency / urgent</option></select></div></div>
+<div class="row">
+  <div>
+    <label>Customer Name *</label>
+    <input type="text" name="customer_name" placeholder="First and last name" autocomplete="name" required>
+  </div>
+  <div>
+    <label>I'm a...</label>
+    <select name="customer_type" required>
+      <option value="" selected disabled>Select customer type</option>
+      <option>Landlord</option>
+      <option>Renter</option>
+      <option>Homeowner</option>
+      <option>Property manager</option>
+      <option>Business</option>
+      <option>Other</option>
+    </select>
+  </div>
+</div>
+<div class="row">
+  <div>
+    <label>Urgency</label>
+    <select name="urgency">
+      <option>Standard / flexible</option>
+      <option>Within 24–48 hours</option>
+      <option>This week</option>
+      <option>Emergency / urgent</option>
+    </select>
+  </div>
+</div>
 <label>What do you need?</label><select><option>Home repair / punch list</option><option>Drain clearing</option><option>Plumbing fixture</option><option>Electrical fixture</option><option>Drywall / painting</option><option>Property maintenance</option><option>Hauling / cleanup</option><option>Multiple items</option><option>Other</option></select>
 <div class="row"><div><label>Property ZIP</label><input inputmode="numeric" placeholder="Indianapolis ZIP"></div><div><label>Budget range</label><select><option>Not sure</option><option>Under $250</option><option>$250–$500</option><option>$500–$1,000</option><option>$1,000+</option></select></div></div>
 <div class="row"><div><label>Preferred date</label><input type="date"></div><div><label>Preferred time</label><select><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Flexible</option></select></div></div>
