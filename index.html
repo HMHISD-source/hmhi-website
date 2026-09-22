@@ -64,7 +64,7 @@ section{padding:70px 0}.light{background:var(--l)}.dark{background:var(--b);colo
 </div></div></section>
 
 <section id="request"><div class="wrap formGrid"><div><div class="head"><h2>Request service</h2><p>Give us enough information to understand the job before the visit. Multiple issues are welcome.</p></div><div class="card"><h3>Intake captures</h3><ul><li>Customer type</li><li>Problem/service category</li><li>Urgency</li><li>Property ZIP</li><li>Preferred date/time</li><li>Budget range</li><li>Photos and description</li></ul><p class="muted">This information can also be used to measure actual customer demand and improve HMHI services over time.</p></div></div>
-<form action="https://formspree.io/f/myezzakz" method="POST">
+<form action="https://formspree.io/f/myezzakz" method="POST" enctype="multipart/form-data">  
 <div class="row">
   <div>
     <label>Customer Name *</label>
@@ -97,8 +97,8 @@ section{padding:70px 0}.light{background:var(--l)}.dark{background:var(--b);colo
 <label>What do you need?</label><select name="service_needed" required><option>Home repair / punch list</option><option>Drain clearing</option><option>Plumbing fixture</option><option>Electrical fixture</option><option>Drywall / painting</option><option>Property maintenance</option><option>Hauling / cleanup</option><option>Multiple items</option><option>Other</option></select>
 <div class="row"><div><label>Property ZIP</label><input inputmode="numeric" placeholder="Indianapolis ZIP"></div><div><label>Budget range</label><select><option>Not sure</option><option>Under $250</option><option>$250–$500</option><option>$500–$1,000</option><option>$1,000+</option></select></div></div>
 <div class="row"><div><label>Preferred date</label><input type="date"></div><div><label>Preferred time</label><select><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Flexible</option></select></div></div>
-<label>Describe the job</label><textarea placeholder="What is happening? What needs to be repaired, installed, removed or maintained?"></textarea>
-<label>Photos</label><input type="file" accept="image/*" multiple>
+<label>Describe the job</label><textarea name="job_description" placeholder="What is happening? What needs to be repaired, installed, removed or maintained?"></textarea>
+<label>Photos</label><input type="file" name="photos" accept="image/*" multiple>
 <button class="btn orange" type="submit">Submit Service Request</button><p id="msg"><strong></strong></p>
 </form></div></section>
 
